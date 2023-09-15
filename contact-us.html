@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">JalilApp</div>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+        <i class="fa-solid fa-bars" id="toggle"></i>
+      </nav>
+    </header>
+
+    <section class="contact">
+      <div class="contact-content">
+        <h1>Contact Us</h1>
+        <p>
+          Have a question or feedback? We'd love to hear from you. Get in touch
+          with us:
+        </p>
+
+        <div class="contact-info">
+          <p>
+            <i class="fa-solid fa-envelope"></i> Email: contact@jalilapp.com
+          </p>
+          <p><i class="fa-solid fa-phone"></i> Phone: +213 05********</p>
+          <p>
+            <i class="fa-solid fa-map-marker"></i> Address: Mostaganem,Algeria
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 JalilApp. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      gsap.from("h1", 1.2, { opacity: 0, y: -80, delay: 1 });
+      gsap.from("p", 1.2, { opacity: 0, y: -80, delay: 0.8 });
+      gsap.from("a", 1.2, { opacity: 0, y: -80, delay: 0.6 });
+
+      const menu = document.querySelector(".menu");
+      const toggle = document.getElementById("toggle");
+
+      toggle.onclick = function () {
+        menu.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>
